@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zana Healthy Food</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body class="dark:bg-gray-900">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:shadow-gray-800 fixed w-full z-50 top-0 left-0">
+        <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="flex items-center">
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                    zana
+                </span>
+            </div>
+            <button data-collapse-toggle="navbar-sticky" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-sticky">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#profile"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#product"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Product
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#service"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Service
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto mt-24">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./public/assets/projects/fashion-campus.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./public/assets/projects/fashion-campus.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./public/assets/projects/fashion-campus.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./public/assets/projects/fashion-campus.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./public/assets/projects/fashion-campus.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                    data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div id="profile" class="max-w-4xl mx-auto mt-14">
+        <div class="flex flex-col justify-between items-center bg-white md:flex-row md:max-w-4xl dark:bg-gray-900">
+            <img class="w-64 rounded-md" src="./public/assets/photo-bw.png" alt="farrelakmal">
+            <div class="max-w-xl p-6 md:p-0">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Zana Healthy Food
+                </h5>
+                <p class="mb-3 text-justify font-normal md:text-lg text-gray-700 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus soluta commodi quod accusamus
+                    recusandae voluptatum placeat debitis aliquam hic reiciendis ipsum illo consequatur esse, asperiores
+                    laudantium necessitatibus eum ea nemo!
+                </p>
+                <p class="mb-3 text-justify font-normal md:text-lg text-gray-700 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus soluta commodi quod accusamus
+                    recusandae voluptatum placeat debitis aliquam hic reiciendis ipsum illo consequatur esse, asperiores
+                    laudantium necessitatibus eum ea nemo!
+                </p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Contact
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="product" class="max-w-4xl mx-auto mt-14">
+        <div class="flex flex-col items-center bg-white dark:bg-gray-900">
+            <div class="p-4">
+                <h1 class="text-5xl font-extrabold dark:text-white">
+                    Products
+                </h1>
+                <h2 class="font-semibold text-center text-lg text-gray-500 dark:text-gray-400">
+                    Our healthy food products
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg" src="./public/assets/projects/fashion-campus.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                        <a href="https://www.behance.net/gallery/157759741/Fashion-Campus?"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Check
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg" src="./public/assets/projects/fashion-campus.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                        <a href="https://www.behance.net/gallery/157759741/Fashion-Campus?"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Check
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg" src="./public/assets/projects/fashion-campus.png" alt="" />
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                        <a href="https://www.behance.net/gallery/157759741/Fashion-Campus?"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Check
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="service" class="max-w-4xl mx-auto mt-14">
+        <div class="flex flex-col items-center bg-white dark:bg-gray-900">
+            <div class="p-4 text-center">
+                <h1 class="text-2xl md:text-5xl font-extrabold dark:text-white">
+                    The most delicious healthy food
+                </h1>
+                <h2 class="font-semibold text-center text-base md:text-lg text-gray-500 dark:text-gray-400">
+                    Here are few reasons why you should try our products
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-6">
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="p-5">
+                        <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            E-commerce Website
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            Online thrifting commerce website design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="bg-white rounded-lg dark:bg-gray-900 m-4 max-w-4xl mx-auto mt-14">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-center">
+                <ul
+                    class="flex flex-wrap items-center justify-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 text-center dark:text-gray-400">© 2023
+                <a href="#" class="hover:underline">Zana Healthy Food™</a>
+                . All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+
+
+
+    <script src="./public/js/jquery.js"></script>
+    <script src="./public/js/flowbite.js"></script>
+    <script src="./public/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $("nav").addClass("shadow-md");
+                } else {
+                    $("nav").removeClass("shadow-md");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
