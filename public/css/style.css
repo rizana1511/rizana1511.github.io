@@ -3887,10 +3887,6 @@ input:checked + .toggle-bg {
     height: 24rem;
   }
 
-  .md\:h-100 {
-    height: 36rem;
-  }
-
   .md\:w-auto {
     width: auto;
   }
